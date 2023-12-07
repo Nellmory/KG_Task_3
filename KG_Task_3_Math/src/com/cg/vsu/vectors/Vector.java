@@ -1,11 +1,12 @@
 package com.cg.vsu.vectors;
 
-public interface Vector {
-    public void sum();
-    public void subtract();
-    public void multiplyByScalar();
-    public void divideByScalar();
-    public void length();
+public interface Vector<T extends Vector> {
+    final float eps = 1e-7f;
+    public T sum(T value1, T value2);
+    public T subtract(T value1, T value2);
+    public void multiplyByScalar(float a);
+    public void divideByScalar(float a);
+    public double length();
     public void normalize();
-    public void ScalarMultiplication();
+    public T ScalarMultiplication(T value1, T value2);
 }
