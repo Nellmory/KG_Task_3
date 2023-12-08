@@ -42,13 +42,13 @@ public class Vector3f implements Vector<Vector3f> {
     }
 
     @Override
-    public double length() {
-        return Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2) + Math.pow(z, 2));
+    public float length() {
+        return (float) Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2) + Math.pow(z, 2));
     }
 
     @Override
     public void normalize() {
-        float length = (float) this.length();
+        float length = this.length();
         x = x / length;
         y = y / length;
         z = z / length;

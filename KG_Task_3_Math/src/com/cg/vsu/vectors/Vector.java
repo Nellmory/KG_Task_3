@@ -6,7 +6,7 @@ public interface Vector<T extends Vector> {
     public T subtract(T value1, T value2);
     public void multiplyByScalar(float a);
     public void divideByScalar(float a);
-    public double length();
+    public float length();
     public void normalize();
     public T ScalarMultiplication(T value1, T value2);
 }
